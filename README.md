@@ -1,5 +1,7 @@
 # README
 
+# DB設計
+
 ## usersテーブル
 
 |Column|Type|Options|
@@ -11,6 +13,8 @@
 ### Association
 - has_many :groups_users
 - belongs_to :groups, through: groups_users
+- has_many :massages
+- has_many :photos
 
 
 ## groupsテーブル
@@ -23,6 +27,36 @@
 ### Association
 - has_many :groups_users
 - belongs_to :users, through: groups_users
+- has_many :massages
+- has_many :photos
+
+
+## massagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique: true|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :users
+
+
+## photosテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique: true|
+|img|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :users
 
 
 ## groups_usersテーブル
