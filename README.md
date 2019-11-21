@@ -6,57 +6,40 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, unique: true|
 |name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
 - has_many :groups_users
-- belongs_to :groups, through: groups_users
+- has_many :groups, through: groups_users
 - has_many :massages
-- has_many :photos
 
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, unique: true|
 |name|string|null: false, unique: true|
 
 ### Association
 - has_many :groups_users
-- belongs_to :users, through: groups_users
+- has_many :users, through: groups_users
 - has_many :massages
-- has_many :photos
 
 
 ## massagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, unique: true|
-|text|text|null: false|
+|text|text||
+|img|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
-- belongs_to :users
-
-
-## photosテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false, unique: true|
-|img|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :users
+- belongs_to :user
 
 
 ## groups_usersテーブル
