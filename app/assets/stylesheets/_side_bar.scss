@@ -1,0 +1,36 @@
+.top {
+  background-color: #253141;
+  height: 82px;
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 82px;
+  padding: 0 20px 0;
+  &__left {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  &__right {
+    right: 20px;
+  }
+    &__btn {
+      color: #FFFFFF;
+    }
+}
+.contents {
+  width: 300px;
+  height: calc(100vh - 82px);
+  background-color: #2f3e51;
+  &__group {
+    padding: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    &__name {
+      font-size: 15px;
+    }
+    &__message {
+      font-size: 11px;
+    }
+  }
+}
