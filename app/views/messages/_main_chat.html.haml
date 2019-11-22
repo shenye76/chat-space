@@ -1,11 +1,12 @@
-.body
-  .header
-    .header__group__name
-      group name
-      .header__group__name__member
-        Member:
-    .header__edit
-      Edit
+.header
+  .header__group__name
+    group name
+    .header__group__name__member
+      Member:
+  .header__edit
+    Edit
+
+.main
   .chat
     .message
       .message__name
@@ -14,3 +15,11 @@
         2019/10/08/19:14:39
     .past__message
       this is a first message
+  
+  .form
+    %span<>
+    %input{type: "text", placeholder: "type a message", class: "input__box"}
+    %label{class: "input__image"}
+      = icon('fas', 'image', class: "input__image__icon")
+      %input{type: "file", class: "input__image__file"}
+    %input{type: "submit", value: "Send", class: "input__send"}
