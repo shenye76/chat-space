@@ -17,9 +17,8 @@
       this is a first message
   
   .form
-    %span<>
-    %input{type: "text", placeholder: "type a message", class: "input__box"}
-    %label{class: "input__image"}
+    %input.input__box{type: "text", placeholder: "type a message"}
+    %label.input__image
       = icon('fas', 'image', class: "input__image__icon")
-      %input{type: "file", class: "input__image__file"}
-    %input{type: "submit", value: "Send", class: "input__send"}
+      %input.input__image__file{type: "file"}
+    %input.input__send{type: "submit", value: "Send"}
