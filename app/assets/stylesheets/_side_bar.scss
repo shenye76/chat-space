@@ -24,15 +24,18 @@ $textcolor: #FFFFFF;
   width: 300px;
   height: calc(100vh - 99px);
   background-color: #2f3e51;
-  .group {
-    padding: 20px;
-    color: $textcolor;
-    font-weight: bold;
-    &__name {
-      font-size: 15px;
-    }
-    &__message {
-      font-size: 11px;
+  .groups {
+    .group {
+      padding: 20px;
+      font-weight: bold;
+      &__name {
+        font-size: 15px;
+        color: $textcolor;
+      }
+      &__message {
+        font-size: 11px;
+        color: $textcolor;
+      }
     }
   }
 }

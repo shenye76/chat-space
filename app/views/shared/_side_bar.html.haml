@@ -8,13 +8,11 @@
       = icon('fas', 'cog')
 
 .middle
-  .group
-    .group__name
-      test
-    .group__message
-      まだメッセージはありません
-  .group
-    .group__name
-      test2
-    .group__message
-      まだメッセージはありません
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
