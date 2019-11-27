@@ -1,8 +1,10 @@
 .header
   .header__group__name
-    group name
+    = @group.name
     .header__group__name__member
       Member:
+      - @group.users.each do |user|
+        = user.name
   .header__edit
     Edit
 
