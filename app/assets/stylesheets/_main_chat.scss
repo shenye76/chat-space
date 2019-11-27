@@ -17,7 +17,7 @@ $messagecolor: #434A54;
       padding: 15px 0 0;
     }
   }
-  &__edit {
+  .edit {
     border: 1px solid;
     border-color: lightblue;
     color: lightblue;
@@ -27,16 +27,16 @@ $messagecolor: #434A54;
     margin-top: 28px;
   }
 }
-.main {
+.messages {
   position: relative;
   background-color: #fafafa;
   height: calc(100vh - 99px);
-  .chat {
+  .message {
     padding: 0 40px 0;
-    .message {
+    .upper__message {
       padding: 46px 0 10px;
       display: flex;
-      &__name {
+      &__user-name {
         font-size: 16px;
         font-weight: bold;
         color: $messagecolor;
@@ -47,7 +47,7 @@ $messagecolor: #434A54;
         padding-left: 10px;
       }
     }
-    .past__message {
+    .lower__message {
       font-size: 14px;
       color: $messagecolor;
     }
@@ -60,26 +60,33 @@ $messagecolor: #434A54;
     border-width: 20px 40px 20px;
     border-style: solid;
     border-color: #ddd;
-    .input__box {
+    &__message {
       border: none;
-      height: 100%;
+      border-right-color: #ddd;
+      border-right-width: 15px;
+      border-right-style: solid;
+      height: 50px;
+      width: calc(100% - 105px);
       font-size: 16px;
       color: $messagecolor;
       padding: 0 0 0 10px;
     }
-    .input__image {
-      &__icon {
-        height: 50px;
-        line-height: 50px;
+    &__mask {
+      .icon {
         position: absolute;
-        right: 80px;
-        padding: 0 10px 0 0;
+        right: 95px;
+        line-height: 50px;
+        height: 50px;
+        margin: 0 10px 0 0;
+        display: inline;
+        bottom: 0;
       }
-      &__file {
+      .hidden {
         display: none;
       }
     }
-    .input__send {
+    
+    &__submit {
       height: 100%;
       width: 80px;
       background-color: #38AEF0;
@@ -87,9 +94,6 @@ $messagecolor: #434A54;
       right: 0;
       bottom: 0;
       border: none;
-      border-left-color: #ddd;
-      border-left-width: 15px;
-      border-left-style: solid;
       color: white;
     }
   }
