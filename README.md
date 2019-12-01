@@ -32,8 +32,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text||
-|img|text||
+|content|text||
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 

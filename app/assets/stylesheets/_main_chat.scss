@@ -53,48 +53,41 @@ $messagecolor: #434A54;
     }
   }
   .form {
-    width: calc(100vw - 380px);
-    height: 50px;
+    width: calc(100vw - 300px);
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 40px 20px 40px;
     position: absolute;
     bottom: 0;
-    border-width: 20px 40px 20px;
-    border-style: solid;
-    border-color: #ddd;
+    background-color: #ddd;
     &__message {
       border: none;
-      border-right-color: #ddd;
-      border-right-width: 15px;
-      border-right-style: solid;
+      float: left;
       height: 50px;
-      width: calc(100% - 105px);
-      font-size: 16px;
-      color: $messagecolor;
-      padding: 0 0 0 10px;
+      width: calc(100% - 150px);
     }
     &__mask {
+      background-color: #ffff;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
       .icon {
-        position: absolute;
-        right: 95px;
+        font-size: 20px;
         line-height: 50px;
-        height: 50px;
-        margin: 0 10px 0 0;
-        display: inline;
-        bottom: 0;
       }
       .hidden {
         display: none;
       }
     }
-    
     &__submit {
-      height: 100%;
-      width: 80px;
-      background-color: #38AEF0;
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      background-color: lightblue;
       border: none;
-      color: white;
+      color: #ffff;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
     }
   }
 }
