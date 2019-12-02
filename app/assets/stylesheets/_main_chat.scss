@@ -28,12 +28,13 @@ $messagecolor: #434A54;
   }
 }
 .messages {
-  position: relative;
   background-color: #fafafa;
-  height: calc(100vh - 99px);
+  width: calc(100vw - 300px);
+  height: calc(100vh - 189px);
+  overflow: scroll;
   .message {
     padding: 0 40px 0;
-    .upper__message {
+    .upper-message {
       padding: 46px 0 10px;
       display: flex;
       &__user-name {
@@ -47,47 +48,47 @@ $messagecolor: #434A54;
         padding-left: 10px;
       }
     }
-    .lower__message {
+    .lower-message {
       font-size: 14px;
       color: $messagecolor;
     }
   }
-  .form {
-    width: calc(100vw - 300px);
-    box-sizing: border-box;
-    height: 90px;
-    padding: 20px 40px 20px 40px;
-    position: absolute;
-    bottom: 0;
-    background-color: #ddd;
-    &__message {
-      border: none;
-      float: left;
-      height: 50px;
-      width: calc(100% - 150px);
+}
+.form {
+  width: calc(100vw - 300px);
+  box-sizing: border-box;
+  height: 90px;
+  padding: 20px 40px 20px 40px;
+  position: absolute;
+  bottom: 0;
+  background-color: #ddd;
+  &__message {
+    border: none;
+    float: left;
+    height: 50px;
+    width: calc(100% - 150px);
+  }
+  &__mask {
+    background-color: #ffff;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    .icon {
+      font-size: 20px;
+      line-height: 50px;
     }
-    &__mask {
-      background-color: #ffff;
-      float: left;
-      height: 50px;
-      padding-right: 10px;
-      .icon {
-        font-size: 20px;
-        line-height: 50px;
-      }
-      .hidden {
-        display: none;
-      }
+    .hidden {
+      display: none;
     }
-    &__submit {
-      background-color: lightblue;
-      border: none;
-      color: #ffff;
-      float: right;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-    }
+  }
+  &__submit {
+    background-color: lightblue;
+    border: none;
+    color: #ffff;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
   }
 }
