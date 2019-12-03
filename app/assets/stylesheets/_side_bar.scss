@@ -24,6 +24,7 @@ $textcolor: #FFFFFF;
   width: 300px;
   height: calc(100vh - 99px);
   background-color: #2f3e51;
+  overflow: scroll;
   .groups {
     .group {
       padding: 20px;
