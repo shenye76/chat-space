@@ -2,11 +2,11 @@ $(function(){
 
   function buildHTML(message){
     if (message.content) {
-      var conte = `<p class="lower-message__content">
+      var content = `<p class="lower-message__content">
                      ${message.content}
                    </p>`
     } else {
-      var conte = ``
+      var content = ``
     }
     if (message.image) {
       var img = `<img src=${message.image} >`
@@ -23,7 +23,7 @@ $(function(){
                     </div>
                   </div>
                   <div class="lower-message">
-                    ${conte}
+                    ${content}
                     ${img}
                   </div>
                 </div>`
@@ -74,7 +74,7 @@ $(function(){
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
-        console.log('error');
+        alert('error');
       });
     };
   }
