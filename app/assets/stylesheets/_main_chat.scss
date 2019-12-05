@@ -20,12 +20,13 @@ $messagecolor: #434A54;
   }
   .edit {
     border: 1px solid;
-    border-color: lightblue;
-    color: lightblue;
+    border-color: #38AEF0;
+    color: #38AEF0;
     padding: 0 20px 0;
     height: 40px;
     line-height: 40px;
     margin-top: 28px;
+    text-decoration: none;
   }
 }
 .messages {
@@ -56,12 +57,9 @@ $messagecolor: #434A54;
   }
 }
 .form {
-  width: calc(100vw - 300px);
   box-sizing: border-box;
   height: 90px;
   padding: 20px 40px 20px 40px;
-  position: absolute;
-  bottom: 0;
   background-color: #ddd;
   &__message {
     border: none;
@@ -84,7 +82,7 @@ $messagecolor: #434A54;
     }
   }
   &__submit {
-    background-color: lightblue;
+    background-color: #38AEF0;
     border: none;
     color: #ffff;
     float: right;

@@ -59,8 +59,9 @@ $(function(){
       last_message_id = $(".message:last").data('message_id');
       s = location.href
       result = s.split("/");
+      group_id = result[result.length -2]
       $.ajax({
-        url: `/groups/${result[4]}/api/messages`,
+        url: `/groups/${group_id}/api/messages`,
         type: 'get',
         dataType: 'json',
         data: {id: last_message_id}
@@ -71,7 +72,9 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         $('.messages').append(insertHTML);
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        if (insertHTML != ''){
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        }
       })
       .fail(function() {
         alert('error');

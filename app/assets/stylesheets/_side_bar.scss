@@ -28,7 +28,6 @@ $textcolor: #FFFFFF;
   .groups {
     .group {
       padding: 20px;
-      font-weight: bold;
       &__name {
         font-size: 15px;
         color: $textcolor;
@@ -39,4 +38,8 @@ $textcolor: #FFFFFF;
       }
     }
   }
+}
+
+.link {
+  text-decoration: none;
 }
