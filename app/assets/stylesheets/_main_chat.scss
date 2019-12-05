@@ -1,5 +1,6 @@
 $messagecolor: #434A54;
 
+
 .header {
   width: calc(100vw - 380px);
   display: flex;
@@ -66,7 +67,7 @@ $messagecolor: #434A54;
     border: none;
     float: left;
     height: 50px;
-    width: calc(100% - 150px);
+    width: calc(100% - 160px);
     padding: 0 0 0 10px;
   }
   &__mask {
